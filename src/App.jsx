@@ -1,19 +1,33 @@
 import React, { useState } from 'react';
-
+import DisplayPosts from './Components/DisplayPosts/DisplayPosts.jsx';
 
 
 function App() {
 
-  const [names, setName] = useState([{nameEntry : "Micah Meza"}])
-  const [postEntry, setPostEntry] = useState([{message : "I love my kids."}])
+  const [entries, setEntries] = useState([{nameEntry : "Micah Meza", message : "I love my kids." }, {nameEntry : "Sarai", message : "I peed. " }])
+  //const [postEntry, setPostEntry] = useState([{}])
 
   return (
-    <div>
-        <table>
-
-      </table>
-    </div>
+      <DisplayPosts parentEntries = {entries}/>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+/*
+ <div className='container-fluid'>
+      <div className='row'>
+        <div className='col-md-8'>
+          <div className='border-box'>
+            Hello World!
+          </div>
+        </div>
+      </div>
+    </div>
+    */
