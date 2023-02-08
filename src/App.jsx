@@ -43,7 +43,8 @@ import React, { useState } from 'react';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
 import CreatePost from './Components/CreatePost/CreatePost.jsx';
-import Post from './Components/Post/Post.jsx';
+import Post from './Components/EntryPost/Post.jsx';
+import Button from './Components/Button/Button.jsx';
 
 
 
@@ -64,9 +65,10 @@ function App() {
   return (
     <div className='App'>
       <NavBar/>
-      <DisplayPosts parentEntries = {entries}/>
       <CreatePost addNewPost = {addEntry} />
-     
+      <DisplayPosts parentEntries = {entries}/>
+
+   
       </div>
   );
 }

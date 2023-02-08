@@ -20,5 +20,29 @@ when each button is clicked.
 
 */
 
+import React, { useState, useEffect } from 'react';
 
-import React, { useState } from 'react';
+
+const Post = (props) => {
+    
+    const [entryData, setEntryData] = useState([]);
+
+    useEffect(() => {
+        let tempEntryData = props.parentsEntries.map(entry => {
+            return [entry.name, entry.message];
+        });
+        setEntryData(tempEntryData);
+
+    }, 
+    [props.parentsEntries]);
+    return (
+        <table>
+            
+        </table>
+
+    );
+}
+ 
+export default Post;
+
+
