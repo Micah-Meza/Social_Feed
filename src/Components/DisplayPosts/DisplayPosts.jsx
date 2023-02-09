@@ -11,24 +11,24 @@ to map each post to its own Post component.
 
 const DisplayPosts = (props) => {
     return (
-        <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Post</th>
-          </tr>
-        </thead>
-        <tbody>
-          {props.parentEntries.map((entry, index) => {
-            return (
-              <tr key = {index}>
-                <td>{entry.nameEntry}</td>
-                <td>{entry.message}</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+    <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Post</th>
+            </tr>
+          </thead>
+      <tbody>
+        {props.parentEntries.map((entries) => {
+          return (
+            <tr>
+              <td>{entries.name}</td>
+              <td>{entries.postEntry}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
     );
 }
  

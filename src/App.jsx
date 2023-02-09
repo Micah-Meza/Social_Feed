@@ -43,20 +43,19 @@ import React, { useState } from 'react';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
 import CreatePost from './Components/CreatePost/CreatePost.jsx';
-import Post from './Components/EntryPost/Post.jsx';
-import Button from './Components/Button/Button.jsx';
+
 
 
 
 
 function App() {
 
-  const [entries, setEntries] = useState([{nameEntry : "Micah Meza", message : "I love my kids." }, {nameEntry : "Sarai", message : "I peed. " }])
+  const [entries, setEntries] = useState([{name : "Micah Meza", postEntry : "I love my kids." }, {nameEntry : "Sarai", message : "I saw a dog. " }])
   //const [postEntry, setPostEntry] = useState([{}])
 
-  function addEntry(entry){
+  function addNewEntry(entry){
 
-    let tempEntries = [...entries, entry];
+    let tempEntries = [...entries, entry,];
     setEntries(tempEntries)
   }
 
@@ -65,11 +64,11 @@ function App() {
   return (
     <div className='App'>
       <NavBar/>
-      <CreatePost addNewPost = {addEntry} />
+      <CreatePost addNewPost = {addNewEntry} />
       <DisplayPosts parentEntries = {entries}/>
 
    
-      </div>
+    </div>
   );
 }
 
