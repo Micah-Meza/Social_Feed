@@ -31,18 +31,11 @@ and post creations.
 
 //**************************************************************************************************************************************************************************************************** */
 
-
-
-
-
-
-
-
-
 import React, { useState } from 'react';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
 import CreatePost from './Components/CreatePost/CreatePost.jsx';
+import './App.css';
 
 
 
@@ -50,7 +43,7 @@ import CreatePost from './Components/CreatePost/CreatePost.jsx';
 
 function App() {
 
-  const [entries, setEntries] = useState([{name : "Micah Meza", postEntry : "I love my kids." }, {nameEntry : "Sarai", message : "I saw a dog. " }])
+  const [entries, setEntries] = useState([{name : "Micah Meza", postEntry : "I love my kids." }, {name: "Sarai", postEntry : "I saw a dog. " }])
   //const [postEntry, setPostEntry] = useState([{}])
 
   function addNewEntry(entry){
@@ -62,11 +55,26 @@ function App() {
 
 
   return (
-    <div className='App'>
-      <NavBar/>
-      <CreatePost addNewPost = {addNewEntry} />
-      <DisplayPosts parentEntries = {entries}/>
+    <div className='container-fluid'>
+      <div className='row'>
+        <div className='col-sm-12'>
 
+          <div>
+            <NavBar/>
+          </div>
+
+          <div className='border-box' style={{alignItems: "center",justifyContent: "center"}}>
+            <CreatePost addNewPost = {addNewEntry} />
+          </div>
+
+          <div className='border-box' style={{display: 'flex',  justifyContent:'center'}}>
+            <DisplayPosts parentEntries = {entries}/>
+          </div>
+
+        </div>
+      </div>
+    
+     
    
     </div>
   );

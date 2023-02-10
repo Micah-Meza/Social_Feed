@@ -3,8 +3,8 @@
 const NavBar = (props) => {
     return (
         <div className="nav">
-            <h3 style={{"margin":"1em"}}>Social
-            <small className='text-muted'>Feed</small></h3>
+            <h2 style={{"margin":"1rem"}}>Social
+            <small className='text-muted'>Feed</small></h2>
         </div>    
     );
 }

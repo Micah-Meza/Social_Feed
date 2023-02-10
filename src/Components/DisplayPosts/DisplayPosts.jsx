@@ -6,22 +6,23 @@ to map each post to its own Post component.
 
 
 */
-
+import EntryPost from '../EntryPost/Post.jsx';
 
 
 const DisplayPosts = (props) => {
     return (
-    <table>
+    <table className='table table-hover'>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Post</th>
+              <th scope='col'>Name</th>
+              <th scope='col'>Post</th>
             </tr>
           </thead>
-      <tbody>
-        {props.parentEntries.map((entries) => {
+      <tbody className='table '>
+        {props.parentEntries.map((entries, index) => {
+          <EntryPost key={index} index={index} entries={entries} />
           return (
-            <tr>
+            <tr key = {index}>
               <td>{entries.name}</td>
               <td>{entries.postEntry}</td>
             </tr>

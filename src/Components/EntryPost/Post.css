@@ -1,8 +1,10 @@
-.form-grid {
-    display: grid;
-
+.post-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    margin: 0 2%;
 }
-
 
 button {
     color: white;

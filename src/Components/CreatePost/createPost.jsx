@@ -6,6 +6,8 @@ and update the App.js state variable with the new array.
 
 */
 import React, { useState } from 'react';
+import './CreatePost.css';
+
 
 
 const CreatePost = (props) => {
@@ -25,14 +27,25 @@ const CreatePost = (props) => {
 
     return (
 
-        <form onSubmit = {handleSubmit}>
-            
-                <lable> Name </lable>
-                <input type = 'text'  value = {name} onChange={(event) => setName(event.target.value)} />
-                <lable> Post </lable>
-                <input type = 'post'  value = {postEntry} onChange={(event) => setPostEntry(event.target.value)} />
-                <button type = 'submit'> Create </button>
-                
+        <form onSubmit = {handleSubmit} className='form-grid'>
+            <div className='form-group row'>    
+                <label htmlFor='nameId' className="col-sm-1 col-form-label"> Name </label>
+                <div className="col-sm-10">
+                    <input type = 'text' className="form-control" id="nameId"  value = {name} onChange={(event) => setName(event.target.value)} />
+                </div>
+            </div> 
+
+            <div className="form-group row">
+                <label htmlFor='Post' className="col-sm-2 col-form-label"> Post </label>  
+                <div className='col-sm-10' justify="center" aligntem='center'>
+                    <textarea className="form-control"  id="Post" rows="3"type = 'post' style={{marginTop :'1em'}}  value = {postEntry} onChange={(event) => setPostEntry(event.target.value)} ></textarea>
+                </div>
+            </div>
+           
+        
+            <div>
+                <button type = 'submit' className="btn btn-primary mb-2" style={{'marginTop' : '1rem'}}> Create </button>
+            </div>
         </form>
 
 

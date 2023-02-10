@@ -1,10 +1,12 @@
 .border-box {
     border: 1px;
+    justify-content: center;
     border-style: solid;
     border-color: black;
     margin: 1em;
     padding: 1em;
 }
+
 
 
 

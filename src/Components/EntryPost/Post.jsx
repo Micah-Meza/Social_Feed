@@ -20,29 +20,20 @@ when each button is clicked.
 
 */
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import'../EntryPost/Post.css';
 
 
 const Post = (props) => {
-    
-    const [entryData, setEntryData] = useState([]);
-
-    useEffect(() => {
-        let tempEntryData = props.parentsEntries.map(entry => {
-            return [entry.name, entry.message];
-        });
-        setEntryData(tempEntryData);
-
-    }, 
-    [props.parentsEntries]);
     return (
-        <table>
-            
-        </table>
+        <div className="post-container">
+            <h1>{props.name}</h1>
+            <p>{props.postEntry}</p>
+
+        </div>
 
     );
 }
  
 export default Post;
-
 
