@@ -2,12 +2,27 @@
     border: 1px;
     justify-content: center;
     border-style: solid;
-    border-color: black;
+    border-color: #ced4da;
     margin: 1em;
     padding: 1em;
+    width: 50%;
 }
 
 
+.grid-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px;
+    justify-content: center;
+    border-style: solid;
+    border-color: #ced4da;
+    margin: 1em;
+    padding: 1em;
+    
+    
+}
 
 
 

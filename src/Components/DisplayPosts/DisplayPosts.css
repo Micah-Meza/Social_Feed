@@ -1,0 +1,42 @@
+.container{
+
+    border: 1px;
+    justify-content: center;
+    border-style: solid;
+    border-color: #000000;
+    margin: 1em;
+    padding: 1em;
+}
+
+.alert-success{
+    --bs-alert-color: #000000;
+    --bs-alert-bg: #ffffff;
+    --bs-alert-border-color: #badbcc;
+}
+
+
+
+.container-box{
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+<i class="glyphicon glyphicon-thumbs-up"></i> 
+ <i class="glyphicon glyphicon-thumbs-down"></i>
+
+ß
+
+
+
+

@@ -36,14 +36,14 @@ const CreatePost = (props) => {
             </div> 
 
             <div className="form-group row">
-                <label htmlFor='Post' className="col-sm-2 col-form-label"> Post </label>  
+                <label htmlFor='Post' className="col-sm-1 col-form-label"> Post </label>  
                 <div className='col-sm-10' justify="center" aligntem='center'>
                     <textarea className="form-control"  id="Post" rows="3"type = 'post' style={{marginTop :'1em'}}  value = {postEntry} onChange={(event) => setPostEntry(event.target.value)} ></textarea>
                 </div>
             </div>
            
         
-            <div>
+            <div className='container'>
                 <button type = 'submit' className="btn btn-primary mb-2" style={{'marginTop' : '1rem'}}> Create </button>
             </div>
         </form>

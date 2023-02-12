@@ -1,6 +1,9 @@
 
 
+
+
 const NavBar = (props) => {
+
     return (
         <div className="nav">
             <h2 style={{"margin":"1rem"}}>Social

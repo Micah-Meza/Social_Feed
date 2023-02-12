@@ -43,8 +43,10 @@ import './App.css';
 
 function App() {
 
-  const [entries, setEntries] = useState([{name : "Micah Meza", postEntry : "I love my kids." }, {name: "Sarai", postEntry : "I saw a dog. " }])
+
+  const [entries, setEntries] = useState([{name : "Micah Meza", postEntry : "I love my kids."}, {name: "Sarai", postEntry : "I saw a dog. "}])
   //const [postEntry, setPostEntry] = useState([{}])
+
 
   function addNewEntry(entry){
 
@@ -55,7 +57,7 @@ function App() {
 
 
   return (
-    <div className='container-fluid'>
+    <div>
       <div className='row'>
         <div className='col-sm-12'>
 
@@ -63,14 +65,17 @@ function App() {
             <NavBar/>
           </div>
 
+      <div className='container-fluid'>
           <div className='border-box' style={{alignItems: "center",justifyContent: "center"}}>
             <CreatePost addNewPost = {addNewEntry} />
           </div>
-
-          <div className='border-box' style={{display: 'flex',  justifyContent:'center'}}>
+  
+          <div className='grid-box' >
             <DisplayPosts parentEntries = {entries}/>
           </div>
 
+      </div>
+       
         </div>
       </div>
     
@@ -83,26 +88,5 @@ function App() {
 export default App;
 
 
-/*
-function NavBar () {
-  return (
-    <div className=''
-  )
-}
-*/
 
 
-
-
-
-/*
- <div className='container-fluid'>
-      <div className='row'>
-        <div className='col-md-8'>
-          <div className='border-box'>
-            Hello World!
-          </div>
-        </div>
-      </div>
-    </div>
-    */

@@ -6,25 +6,36 @@ to map each post to its own Post component.
 
 
 */
+import moment from 'moment';
 import EntryPost from '../EntryPost/Post.jsx';
 
 
 const DisplayPosts = (props) => {
     return (
-    <table className='table table-hover'>
-          <thead>
-            <tr>
-              <th scope='col'>Name</th>
-              <th scope='col'>Post</th>
-            </tr>
-          </thead>
+    <table className='table'>
+         
       <tbody className='table '>
         {props.parentEntries.map((entries, index) => {
           <EntryPost key={index} index={index} entries={entries} />
           return (
             <tr key = {index}>
-              <td>{entries.name}</td>
-              <td>{entries.postEntry}</td>
+              <td>
+                <h5>{entries.name}</h5>
+                <p>
+                  <h5>{entries.postEntry}</h5>
+                </p>
+              <div>
+                {moment(props.createdAt).format('MMM DD, YYYY')}
+              </div>
+              
+              <div className='glyphicon'>
+                <span className="glyphicon glyphicon-thumbs-up"></span>             
+                <button type="button" className="btn btn-default" ><span className="glyphicon glyphicon-thumbs-up"></span>Like</button>
+              
+                <span className="glyphicon glyphicon-thumbs-down"></span>
+                <button type="button" className="btn btn-default"><span className="glyphicon glyphicon-thumbs-down"></span> Unlike</button>
+              </div>             
+              </td>
             </tr>
           );
         })}
