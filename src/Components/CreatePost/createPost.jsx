@@ -27,25 +27,25 @@ const CreatePost = (props) => {
 
     return (
 
-        <form onSubmit = {handleSubmit} className='form-grid'>
-            <div className='form-group row'>    
-                <label htmlFor='nameId' className="col-sm-1 col-form-label"> Name </label>
-                <div className="col-sm-10">
+        <form onSubmit = {handleSubmit}>
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <div className='form-groupName'>    
+                <label htmlFor='nameId' className="columnLabel"> Name </label>
                     <input type = 'text' className="form-control" id="nameId"  value = {name} onChange={(event) => setName(event.target.value)} />
-                </div>
+               
             </div> 
 
-            <div className="form-group row">
-                <label htmlFor='Post' className="col-sm-1 col-form-label"> Post </label>  
-                <div className='col-sm-10' justify="center" aligntem='center'>
-                    <textarea className="form-control"  id="Post" rows="3"type = 'post' style={{marginTop :'1em'}}  value = {postEntry} onChange={(event) => setPostEntry(event.target.value)} ></textarea>
-                </div>
+            <div className="form-groupPost">
+                <label htmlFor='Post' className="midColumnLabel"> Post </label>  
+                    <textarea className="form-control"  id="Post" rows="3"type = 'post' style={{marginTop :'1em',marginBottom : '1rem'}}  value = {postEntry} onChange={(event) => setPostEntry(event.target.value)} ></textarea>
+                
             </div>
            
         
-            <div className='container'>
+            <div className='createButtonContainer'>
                 <button type = 'submit' className="btn btn-primary mb-2" style={{'marginTop' : '1rem'}}> Create </button>
             </div>
+        </div>
         </form>
 
 

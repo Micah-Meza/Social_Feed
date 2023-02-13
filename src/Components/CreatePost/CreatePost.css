@@ -11,6 +11,24 @@
     margin-top: 1rem;
 }
 
+.form-groupName{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-groupPost{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.createButtonContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .container-fluid{
     display: flex;
     flex-direction: column;
@@ -36,4 +54,22 @@
 
 .entryData{
     width: fit-content;
+}
+
+.columnLabel{
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+    width: 12%;
+}
+
+.midColumnLabel{
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+    width: 12%;
 }

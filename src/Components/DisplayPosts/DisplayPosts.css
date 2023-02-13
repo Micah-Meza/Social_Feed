@@ -14,13 +14,93 @@
     --bs-alert-border-color: #badbcc;
 }
 
+.parentTableBox{
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.tableBox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    --bs-table-color: var(--bs-body-color);
+    --bs-table-bg: transparent;
+    --bs-table-border-color: var(--bs-border-color);
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: var(--bs-body-color);
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: var(--bs-body-color);
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: var(--bs-body-color);
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 77%;
+    margin: 1rem;
+    color: var(--bs-table-color);
+    vertical-align: top;
+    border-color: var(--bs-table-border-color);
+    flex-wrap: wrap;
+    align-content: center;
+}
 
 .container-box{
     background-color: black;
 }
 
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 105%;
+}
 
+.buttonContainer{
+    display: flex;
+    border-style: solid;
+    border: solid;
+    border-block-color: rgb(0, 0, 0);
+
+}
+
+.entryBox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+}
+
+.postBox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.postBoxDisplay{
+    display: flex;
+    border-radius: var(--bs-border-radius)!important;
+    width: 217%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+
+/*
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  }
 
 
 
@@ -32,11 +112,16 @@
 
 
 /*
+
+<div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" className="btn btn-secondary">Left</button>
+                <button type="button" className="btn btn-secondary">Middle</button>
+              </div>
+
+
 <i class="glyphicon glyphicon-thumbs-up"></i> 
  <i class="glyphicon glyphicon-thumbs-down"></i>
-
-ß
-
+*/
 
 
 

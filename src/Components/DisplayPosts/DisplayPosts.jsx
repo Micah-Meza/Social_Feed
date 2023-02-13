@@ -8,35 +8,51 @@ to map each post to its own Post component.
 */
 import moment from 'moment';
 import EntryPost from '../EntryPost/Post.jsx';
+import './DisplayPosts.css'
 
 
 const DisplayPosts = (props) => {
     return (
-    <table className='table'>
+    <table className='parentTableBox'>
          
-      <tbody className='table '>
+      <tbody className='tableBox'>
         {props.parentEntries.map((entries, index) => {
           <EntryPost key={index} index={index} entries={entries} />
           return (
+          
             <tr key = {index}>
-              <td>
+
+              <div class="shadow p-3 mb-5 bg-white postBoxDisplay">
+            
                 <h5>{entries.name}</h5>
-                <p>
+                <div className='entryBox'>
+                  
+                  <div className='postBox'>
+                  <p>  
                   <h5>{entries.postEntry}</h5>
                 </p>
-              <div>
+                </div>
+
+               <div className='footerContainer'>
                 {moment(props.createdAt).format('MMM DD, YYYY')}
-              </div>
+
+
+               
+                  
               
-              <div className='glyphicon'>
-                <span className="glyphicon glyphicon-thumbs-up"></span>             
-                <button type="button" className="btn btn-default" ><span className="glyphicon glyphicon-thumbs-up"></span>Like</button>
-              
-                <span className="glyphicon glyphicon-thumbs-down"></span>
-                <button type="button" className="btn btn-default"><span className="glyphicon glyphicon-thumbs-down"></span> Unlike</button>
-              </div>             
-              </td>
+                <div className='buttonContainer'>
+                        <button type="button" className="btn btn-default">Like</button>
+                      </div><div className='buttonContainer'>
+                          <button type="button" className="btn btn-default"><span className="glyphicon glyphicon-thumbs-down"></span> Unlike</button>
+                        </div>
+                
+                
+              </div>          
+              </div> 
+              </div>  
+
             </tr>
+              
           );
         })}
       </tbody>
