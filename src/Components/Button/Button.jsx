@@ -1,22 +1,29 @@
 import React, { useState } from 'react';
+import './Button.css';
 
 
 
 
 const Button = (props) => {
 
-    const [buttonClick, setButtonClick] = useState("active")
+    const [buttonClass, setButtonClass] = useState("inactive");
+
     function handleClick(){
+
+        if (buttonClass === 'inactive'){
+            setButtonClass('active');
+        }
+        else {
+            setButtonClass('inactive');
+        }
 
     }
     return (
         <div>
-            <button type="button" class="btn btn-default" aria-label="Left Align">
-             <span className={"glyphicon glyphicon-thumbs-up"} aria-hidden="true"></span>
-            </button>
-            <button className={buttonClick} class="glyphicon glyphicon-thumbs-up" onClick={handleClick}>{props.message}</button>
-        </div>
-    );
+            <button className={buttonClass} onClick={handleClick}></button>
+      </div>
+    )
 }
+
  
-export default Button ;
+export default Button;

@@ -17,6 +17,7 @@
 .parentTableBox{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .tableBox{
@@ -40,6 +41,7 @@
     border-color: var(--bs-table-border-color);
     flex-wrap: wrap;
     align-content: center;
+    overflow-wrap: break-word;
 }
 
 .container-box{
@@ -58,10 +60,7 @@
 
 .buttonContainer{
     display: flex;
-    border-style: solid;
-    border: solid;
-    border-block-color: rgb(0, 0, 0);
-
+    
 }
 
 .entryBox{
@@ -81,47 +80,26 @@
     justify-content: center;
     align-items: center;
     width: 80%;
+    word-break: break-all; 
+    overflow-wrap: break-word;
 }
 
 .postBoxDisplay{
     display: flex;
     border-radius: var(--bs-border-radius)!important;
-    width: 217%;
+    width: 138%;
     flex-wrap: nowrap;
     justify-content: center;
     flex-direction: column;
     align-items: stretch;
 }
 
-
-
-/*
-@font-face {
-    font-family: 'Glyphicons Halflings';
-    src: url('../fonts/glyphicons-halflings-regular.eot');
-    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-  }
-
-
-
-
-
-
-
-
-
-
-/*
-
-<div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" className="btn btn-secondary">Left</button>
-                <button type="button" className="btn btn-secondary">Middle</button>
-              </div>
-
-
-<i class="glyphicon glyphicon-thumbs-up"></i> 
- <i class="glyphicon glyphicon-thumbs-down"></i>
-*/
-
+tr{
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    overflow-wrap: break-word;
+    width: 45%;
+}
 
 

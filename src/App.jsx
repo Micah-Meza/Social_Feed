@@ -44,7 +44,7 @@ import './App.css';
 function App() {
 
 
-  const [entries, setEntries] = useState([{name : "Micah Meza", postEntry : "I love my kids."}, {name: "Sarai", postEntry : "I saw a dog. "}])
+  const [entries, setEntries] = useState([{name : "Micah Meza", postEntry : "I love my kids."}, {name: "Sarai", postEntry : "I saw a beautiful dog. That was a blue "}])
   //const [postEntry, setPostEntry] = useState([{}])
 
 
