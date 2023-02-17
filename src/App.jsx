@@ -65,7 +65,7 @@ function App() {
             <NavBar/>
           </div>
 
-      <div className='container-fluid'>
+      <div className='full_Container'>
           <div className='border-box' style={{alignItems: "center",justifyContent: "center"}}>
             <CreatePost addNewPost = {addNewEntry} />
           </div>

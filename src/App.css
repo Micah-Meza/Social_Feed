@@ -1,17 +1,16 @@
 ::after, ::before {
     box-sizing: border-box;
-    word-break: normal;
+    word-break: break-all;
 }
 
 
 .border-box {
     border: 1px;
     justify-content: center;
-   
+    width: 40%;
     border-color: #ced4da;
-    margin: 1em;
     padding: 1em;
-    width: 50%;
+    width: 40%;
     border-radius: 1%;
 }
 
@@ -22,25 +21,30 @@
     align-items: flex-start;
     border: 1px;
     justify-content: center;
-  
     border-color: #ced4da;
     margin: 1em;
     padding: 1em;
     border-radius: 1%;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 30%;
 }
 
-.container-fluid {
---bs-gutter-x: 1.5rem;
+.full_Container {
+    display: flex;
+    --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-right: auto;
     margin-left: auto;
-    background-color: bisque;
-}
+    background-color: cadetblue;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    }
+
 
 
 

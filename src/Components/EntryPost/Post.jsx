@@ -20,16 +20,40 @@ when each button is clicked.
 
 */
 
-import React from 'react';
+
 import'../EntryPost/Post.css';
+import {BsFillHandThumbsDownFill, BsFillHandThumbsUpFill} from "react-icons/bs";
+import React, { useState } from 'react';
+import moment from 'moment';
 
 
-const Post = (props) => {
+
+
+const Post = ({entry}) => {
+    const [activeThumbsUp, setActiveThumbsUp] = useState(false)
+    const [activeThumbsDown, setActiveThumbsDown] = useState(false)
     return (
         <div className="post-container">
-            <h1>{props.name}</h1>
-            <p>{props.postEntry}</p>
 
+            <div className='name'>
+                <h3>{entry.name}</h3>
+            </div>
+
+            <div className='postBox'>
+                <p><h3>{entry.postEntry}</h3></p>
+            </div>
+
+            <div className='footerContainer'>
+                {moment(entry.createdAt).format('MMM DD, YYYY')}
+
+            
+                <div className='thumbButtons'>
+                    
+                    <BsFillHandThumbsUpFill onClick={() => setActiveThumbsUp(!activeThumbsUp)} color = {activeThumbsUp ? 'green': 'gray'} />
+            
+                    <BsFillHandThumbsDownFill onClick={() => setActiveThumbsDown(!activeThumbsDown)} color = {activeThumbsDown ? 'red': 'gray'}/>
+            </div>     
+            </div>
         </div>
 
     );

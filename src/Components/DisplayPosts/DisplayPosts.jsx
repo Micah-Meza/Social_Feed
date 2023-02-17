@@ -6,23 +6,40 @@ to map each post to its own Post component.
 
 
 */
-import moment from 'moment';
-import EntryPost from '../EntryPost/Post.jsx';
+
+import Post from '../EntryPost/Post.jsx';
 import './DisplayPosts.css'
-import {BsFillHandThumbsDownFill, BsFillHandThumbsUpFill} from "react-icons/bs";
 
 
 
 
+const DisplayPosts = (props) => {
+  return (  
+    <>
+    {props.parentEntries.map((entry, index) => {
+      return (
+        <div class="shadow p-3 mb-5 bg-white postBoxDisplay">  
+        <Post key = {index} entry = {entry}/>
+            
+        </div>
+      )
+    })}
+    </>
+  );
+}
+ 
+export default DisplayPosts;
 
 
+
+/*
 const DisplayPosts = (props) => {
     return (
     <table className='parentTableBox'>
          
       <tbody className='tableBox'>
         {props.parentEntries.map((entries, index) => {
-          <EntryPost key={index} index={index} entries={entries} />
+          <Post key={index} index={index} entries={entries} />
           return (
               <div class="shadow p-3 mb-5 bg-white postBoxDisplay">  
                 <h5>{entries.name}</h5>
@@ -48,5 +65,5 @@ const DisplayPosts = (props) => {
     );
 }
 export default DisplayPosts;
-
+*/
 
